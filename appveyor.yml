@@ -3,5 +3,8 @@ install:
   - dir
   - perl -V
   - cpan App::cpanminus
-  - cd
-  - cpanm --installdeps .
+  - cpanm --installdeps -v .
+  
+build_script:
+  - perl Makefile.PL
+  - prove -l -v -r t
