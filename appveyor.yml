@@ -3,3 +3,4 @@ install:
   - dir
   - perl -V
   - cpan App::cpanminus
+  - cd
