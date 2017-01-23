@@ -1,4 +1,5 @@
 install:
   - cd
+  - dir
   - perl -V
-  - cpan -V
+  
