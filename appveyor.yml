@@ -4,3 +4,4 @@ install:
   - perl -V
   - cpan App::cpanminus
   - cd
+  - cpanm -v
