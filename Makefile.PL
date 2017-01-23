@@ -19,6 +19,8 @@ WriteMakefile(
         'Test::File' => 0,
     },
     PREREQ_PM => {
+        Moose => 0,
+        PDL => 0,
         #'ABC'              => 1.6,
         #'Foo::Bar::Module' => 5.0401,
     },
