@@ -7,5 +7,5 @@ install:
   - dir
   - cpanm --installdeps .
   - perl Makefile.PL
-  - make test
   - prove -lr t
+  - dmake test
