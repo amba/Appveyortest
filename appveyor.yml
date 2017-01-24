@@ -2,6 +2,10 @@ install:
 #  - choco install gnuplot.portable
 #  - gnuplot --version
   - cpan App::cpanminus
-  - cpanm --version
-  - perl -V
-  - cpanm -v IPC::Run
+  - git clone http://github.com/toddr/IPC-Run.git
+  - cd IPC-Run
+  - dir
+  - cpanm --installdeps .
+  - perl Makefile.PL
+  - make test
+  - prove -lr t
