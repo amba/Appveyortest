@@ -3,4 +3,5 @@ install:
 #  - gnuplot --version
   - cpan App::cpanminus
   - cpanm --version
+  - perl -V
   - cpanm -v IPC::Run
