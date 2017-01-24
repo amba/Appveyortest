@@ -3,3 +3,4 @@ install:
   - dir
   - choco install gnuplot.portable
   - gnuplot --version
+  - cpan PDL::Graphics::Gnuplot
