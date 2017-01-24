@@ -1,10 +1,5 @@
 install:
   - cd
   - dir
-  - perl -V
-  - cpan App::cpanminus
-  - cpanm --installdeps -v .
-  
-build_script:
-  - perl Makefile.PL
-  - prove -l -v -r t
+  - choco install gnuplot.portable
+  - gnuplot --version
