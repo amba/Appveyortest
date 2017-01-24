@@ -4,6 +4,6 @@ install:
   - choco install gnuplot.portable
   - gnuplot --version
   - cpan App::cpanminus
-  - cpanm -v IPC::Run
-  # - cpanm -n PDL
-  # - cpanm -v PDL::Graphics::Gnuplot
+  - cpanm -v -f IPC::Run
+  - cpanm -n PDL
+  - cpanm -v PDL::Graphics::Gnuplot
