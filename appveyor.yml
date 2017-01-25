@@ -2,4 +2,5 @@ install:
   - choco install --allowemptychecksum strawberryperl
   - set PATH=C:\strawberry\perl\bin;C:\strawberry\perl\site\bin;C:\strawberry\c\bin;%PATH%
   - perl -V
+  - cpan IPC::Run
 #  - gnuplot --version
