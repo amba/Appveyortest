@@ -1,13 +1,11 @@
 install:
   - choco install --allowemptychecksum strawberryperl
-  - refreshenv
-#  - set PATH=C:\strawberry\perl\bin;C:\strawberry\perl\site\bin;C:\strawberry\c\bin;%PATH%
+  - set PATH=C:\strawberry\perl\bin;C:\strawberry\perl\site\bin;C:\strawberry\c\bin;%PATH%
   - perl -V
   - cpan App::cpanminus
-  - cpanm -n IPC::Run
-  - choco install gnuplot.portable
-  - gnuplot --version
-  - cpanm -n PDL
-  - cpanm -v PDL::Graphics::Gnuplot
+  - cpanm --look IPC::Run
+  - perl Makefile.PL
+  - dmake
+  - prove -v -b t
   
 #  - gnuplot --version
