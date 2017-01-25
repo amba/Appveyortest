@@ -1,10 +1,4 @@
 install:
-  perl -V
-  cpan IPC::Run
-  # - cpan App::cpanminus
-  # - git clone http://github.com/toddr/IPC-Run.git
-  # - cd IPC-Run
-  # - dir
-  # - cpanm --installdeps .
-  # - perl Makefile.PL
-  # - dmake test
+  - choco install --allowemptychecksum strawberryperl
+  - perl -V
+#  - gnuplot --version
