@@ -3,7 +3,8 @@ install:
   - set PATH=C:\strawberry\perl\bin;C:\strawberry\perl\site\bin;C:\strawberry\c\bin;%PATH%
   - perl -V
   - cpan App::cpanminus
-  - cpanm --look IPC::Run
+  - git clone https://github.com/toddr/IPC-Run.git
+  - cd IPC-Run
   - perl Makefile.PL
   - dmake
   - prove -v -b t
