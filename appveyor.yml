@@ -1,4 +1,5 @@
 install:
+  perl -V
   cpan IPC::Run
   # - cpan App::cpanminus
   # - git clone http://github.com/toddr/IPC-Run.git
