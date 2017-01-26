@@ -1,6 +1,8 @@
 install:
-  - choco install --allowemptychecksum strawberryperl
-  - set PATH=C:\strawberry\perl\bin;C:\strawberry\perl\site\bin;C:\strawberry\c\bin;%PATH%
+  - Invoke-WebRequest -Uri http://strawberryperl.com/download/5.24.1.1/strawberry-perl-5.24.1.1-64bit.msi -OutFile strawberry.msi
+  - dir
+  - $env:Path
+  - perl -V
   - choco install gnuplot
   - gnuplot --version
   - perl -V
