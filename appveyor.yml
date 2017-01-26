@@ -1,14 +1,8 @@
 install:
-  - ps: $PSVersionTable.PSVersion
-  - ps: Invoke-WebRequest -Uri http://strawberryperl.com/download/5.24.1.1/strawberry-perl-5.24.1.1-64bit.msi -OutFile strawberry.msi
-  - ps: dir
-  - $env:Path
-  - perl -V
-  - choco install gnuplot
-  - gnuplot --version
-  - perl -V
-  - cpan App::cpanminus
-  - cpanm -n PDL
-  - cpanm -v PDL::Graphics::Gnuplot
+  - ps: |
+$PSVersionTable.PSVersion
+Invoke-WebRequest -Uri http://strawberryperl.com/download/5.24.1.1/strawberry-perl-5.24.1.1-64bit.msi -OutFile strawberry.msi
+dir
+   
   
 #  - gnuplot --version
