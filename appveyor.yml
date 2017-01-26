@@ -1,8 +1,8 @@
 install:
-  - ps: |
-$PSVersionTable.PSVersion
-Invoke-WebRequest -Uri http://strawberryperl.com/download/5.24.1.1/strawberry-perl-5.24.1.1-64bit.msi -OutFile strawberry.msi
-dir
+  - ps: $PSVersionTable.PSVersion
+  - ps: Invoke-WebRequest -Uri http://strawberryperl.com/download/5.24.1.1/strawberry-perl-5.24.1.1-64bit.msi -OutFile strawberry.msi
+  - ps: msiexec /i strawberry.msi
+  - ps: $Env:Path
    
   
 #  - gnuplot --version
