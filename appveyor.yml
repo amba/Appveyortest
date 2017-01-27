@@ -1,8 +1,9 @@
 install:
-  - choco install --allowemptychecksum --x86 strawberryperl
-  - set PATH=C:\strawberry\perl\bin;C:\strawberry\perl\site\bin;C:\strawberry\c\bin;%PATH%
-  - perl -V
+  # - choco install --allowemptychecksum --x86 strawberryperl
+  # - set PATH=C:\strawberry\perl\bin;C:\strawberry\perl\site\bin;C:\strawberry\c\bin;%PATH%
+  # - perl -V
   - choco install gnuplot
+  - PATH
   - gnuplot --version
-  - cpan Alien::Gnuplot
-  - perl gnuplot_pipe.pl
+  # - cpan Alien::Gnuplot
+  # - perl gnuplot_pipe.pl
