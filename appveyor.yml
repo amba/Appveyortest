@@ -1,12 +1,7 @@
+platform:
+  - x86
+  - x64
 install:
-  - choco install --x86 strawberryperl --version 5.24.1.1
+  - choco install strawberryperl --version 5.24.1.1
   - path C:\strawberry\perl\bin;C:\strawberry\perl\site\bin;C:\strawberry\c\bin;%PATH%
   - perl -V
-  - choco uninstall strawberryperl
-  - choco install --x86 --allowemptychecksum strawberryperl
-  - perl -V
-  # - choco install gnuplot
-  # - PATH
-  # - gnuplot --version
-  # - cpan Alien::Gnuplot
-  # - perl gnuplot_pipe.pl
