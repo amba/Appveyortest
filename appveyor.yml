@@ -1,4 +1,3 @@
-install:
 configuration:
   - 5.24.1.1
   - 5.24.1.1 --x86
