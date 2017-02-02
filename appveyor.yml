@@ -1,9 +1,16 @@
 configuration:
-  - --version 5.24.1.1
-  - --version 5.24.1.1 --x86
-  - --allowemptychecksum --version 5.20.1.1
-  - --allowemptychecksum --version 5.20.1.1 --x86
+  - 5.24.1.1
+  - 5.24.1.1 --x86
+  - 5.20.3.1
+  - 5.20.3.1 --x86
+  - 5.18.4.1
+  - 5.18.4.1 --x86
+  - 5.16.3.20170202
+  - 5.16.3.20170202 --x86
+  - 5.14.4.1
+  - 5.14.4.1 --x86
+  
 install:
-  - choco install strawberryperl %configuration%
+  - choco install strawberryperl --version %configuration%
   - path C:\strawberry\perl\bin;C:\strawberry\perl\site\bin;C:\strawberry\c\bin;%PATH%
   - perl -V
