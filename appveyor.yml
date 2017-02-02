@@ -1,5 +1,7 @@
 install:
-  - gcc --version
+  - path C:\cygwin64\bin;%PATH%
+  - run "echo on cygwin"
+  - run "gcc --version"
 # configuration:
 #   - 5.24.1.1
 #   - 5.24.1.1 --x86
