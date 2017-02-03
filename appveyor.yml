@@ -16,5 +16,4 @@ install:
 
 build_script:
    - perl -V
-   - cpanm -v Moose
-   - cpanm -v MooseX::Params::Validate
+   - cpanm -v PDL
