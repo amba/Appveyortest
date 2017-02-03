@@ -16,4 +16,4 @@ install:
 
 build_script:
    - perl -V
-   - cpanm -v PDL
+   - cpanm -v Devel::CheckLib
