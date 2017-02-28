@@ -1,3 +1,7 @@
 
 build_script:
   - c:\cygwin64\bin\sh -lc "echo Hi"
+  - c:\cygwin64\bin\sh -lc "printenv PATH"
+  - c:\cygwin64\bin\sh -lc "gcc --version"
+  - c:\cygwin64\bin\sh -lc "perl --version"
+  
