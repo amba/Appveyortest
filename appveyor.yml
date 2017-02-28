@@ -1,8 +1,7 @@
 
 build_script:
-  - c:\cygwin64\bin\sh -lc "cd $APPVEYOR_BUILD_FOLDER && ls; pwd"
-  - c:\cygwin64\bin\sh -lc "printenv PATH"
-  - c:\cygwin64\bin\sh -lc "gcc --version"
-  - c:\cygwin64\bin\sh -lc "perl --version"
-  - c:\cygwin64\bin\sh -lc "exit 1"
+  - c:\cygwin64\bin\sh -lc "git clone git://git.ghostscript.com/mupdf.git"
+  - c:\cygwin64\bin\sh -lc "cd mupdf && git submodule update --init"
+  - c:\cygwin64\bin\sh -lc "make"
+  
   
