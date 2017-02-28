@@ -1,11 +1,3 @@
-environment:
-  matrix:
-    - aaaa: 1
-      bbbb: 2
-      cccc: 3
-    - aaaa: 10
-      bbbb: 20
-      cccc: 30
 
 build_script:
-  - echo %aaaa% %bbbb% %cccc%
+  - c:\cygwin64\bin\sh -lc "echo Hi"
