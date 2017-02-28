@@ -4,4 +4,5 @@ build_script:
   - c:\cygwin64\bin\sh -lc "printenv PATH"
   - c:\cygwin64\bin\sh -lc "gcc --version"
   - c:\cygwin64\bin\sh -lc "perl --version"
+  - c:\cygwin64\bin\sh -lc "exit 1"
   
