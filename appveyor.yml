@@ -2,6 +2,6 @@
 build_script:
   - c:\cygwin64\bin\sh -lc "git clone git://git.ghostscript.com/mupdf.git"
   - c:\cygwin64\bin\sh -lc "cd mupdf && git submodule update --init"
-  - c:\cygwin64\bin\sh -lc "make"
+  - c:\cygwin64\bin\sh -lc "cd mupdf && make"
   
   
