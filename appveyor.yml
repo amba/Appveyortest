@@ -2,6 +2,6 @@ environment:
   matrix:
     - cygwin: c:\cygwin64\bin\sh -lc
 build_script:
-  - "%cygwin%" "git clone git://git.ghostscript.com/mupdf.git"
+  - '%cygwin% "git clone git://git.ghostscript.com/mupdf.git"'
   
   
