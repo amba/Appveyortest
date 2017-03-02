@@ -1,7 +1,7 @@
-environment:
-  matrix:
-    - cygwin: c:\cygwin64\bin\sh -lc
 build_script:
-  - '%cygwin% "git clone git://git.ghostscript.com/mupdf.git"'
+  - |
+  echo 1
+  echo 2
+  echo 3
   
   
