@@ -3,7 +3,6 @@ use 5.020;
 use warnings;
 use strict;
 use experimental 'signatures';
-use autodie qw/:all/;
 use Data::Dumper;
 
 my @bash_cmd = ('C:\\msys64\usr\bin\bash', '-lc');
@@ -14,5 +13,6 @@ verbose_system(@bash_cmd, qw/ls -l/);
 
 sub verbose_system (@command) {
     warn "command: @command\n";
-    system(@command);
+    system(@command) == 0
+        or die "command failed\n";
 }
