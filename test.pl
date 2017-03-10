@@ -5,5 +5,5 @@ use strict;
 
 use Data::Dumper;
 
-print "ENV: ", \%ENV;
+print "ENV: ", Dumper \%ENV;
 say for @ARGV;
