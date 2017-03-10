@@ -5,11 +5,16 @@ use strict;
 use experimental 'signatures';
 use Data::Dumper;
 
-my @bash_cmd = ('C:\\msys64\usr\bin\bash', '-lc');
 my $build_folder = $ENV{APPVEYOR_BUILD_FOLDER};
+my @bash = ('C:\\msys64\usr\bin\bash', '-lc');
 say "folder: $build_folder";
 
-verbose_system(@bash_cmd, 'echo abcd');
+run_bash_command("ls -l");
+
+sub run_bash_command ($command) {
+    $command = "cd $build_folder && $command";
+    verbose_system(@bash, $command);
+}
 
 sub verbose_system (@command) {
     warn "command: @command\n";
