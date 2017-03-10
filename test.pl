@@ -6,6 +6,7 @@ use experimental 'signatures';
 use Data::Dumper;
 
 my $build_folder = $ENV{APPVEYOR_BUILD_FOLDER};
+$build_folder =~ s{\\}{/}g;
 my @bash = ('C:\\msys64\usr\bin\bash', '-lc');
 say "folder: $build_folder";
 
