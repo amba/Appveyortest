@@ -1,8 +1,6 @@
 environment:
   matrix:
-    - bash: C:\\msys64\usr\bin\bash -lc
+    - args: -a 1 -b 2
 build_script:
-  - |
-    %bash% "echo 1"
-    %bash% "perl --version"
+  - C:\\msys64\usr\bin\bash -lc "perl $APPVEYOR_BUILD_FOLDER/test.pl %args%"
   
