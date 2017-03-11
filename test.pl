@@ -24,7 +24,7 @@ verbose_system(qw/perl --version/);
 verbose_system(qw(wget http://cpanmin.us -O /usr/bin/cpanm));
 verbose_system(qw(chmod u+x /usr/bin/cpanm));
 verbose_system(qw(cpanm --version));
-verbose_system(qw(cpanm Text::Diff);
+verbose_system(qw(cpanm Text::Diff));
 
 sub verbose_system (@command) {
     warn "command: @command\n";
