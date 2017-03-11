@@ -10,7 +10,7 @@ my $build_folder = $ENV{APPVEYOR_BUILD_FOLDER};
 $build_folder =~ s{\\}{/}g;
 say "folder: $build_folder";
 
-safe_chdir $build_folder;
+safe_chdir($build_folder);
 
 my $dir = getcwd();
 say "pwd: $dir";
