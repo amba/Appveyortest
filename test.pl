@@ -8,8 +8,9 @@ use Cwd;
 
 my $build_folder = $ENV{APPVEYOR_BUILD_FOLDER};
 $build_folder =~ s{\\}{/}g;
-my @bash = ('C:\\msys64\usr\bin\bash', '-lc');
 say "folder: $build_folder";
+
+safe_chdir $build_folder;
 
 my $dir = getcwd();
 say "pwd: $dir";
@@ -24,4 +25,9 @@ sub verbose_system (@command) {
     warn "command: @command\n";
     system(@command) == 0
         or die "command failed\n";
+}
+
+sub safe_chdir ($path) {
+    chdir $path
+        or die "cannot chdir to $path: $!";
 }
