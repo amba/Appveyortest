@@ -27,7 +27,11 @@ verbose_system(qw(cpanm --version));
 verbose_system(qw(cpanm Text::Diff));
 
 sub verbose_system (@command) {
-    warn "command: @command\n";
+    warn <<"EOF"
+##################################################
+# command: @command
+##################################################
+EOF
     system(@command) == 0
         or die "command failed\n";
 }
