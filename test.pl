@@ -21,6 +21,9 @@ verbose_system(qw/ls -l/);
 verbose_system(qw/make --version/);
 verbose_system(qw/gcc --version/);
 verbose_system(qw/perl --version/);
+verbose_system(qw(wget http://cpanmin.us -O /usr/bin/cpanm));
+verbose_system(qw(chmod u+x /usr/bin/cpanm));
+verbose_system(qw(cpanm --version));
 
 sub verbose_system (@command) {
     warn "command: @command\n";
