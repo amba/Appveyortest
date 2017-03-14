@@ -1,2 +1,11 @@
+environment:
+  matrix:
+    - var1: x
+      var2: y
+    - var1: a
+      var2: b
+
 build_script:
-  - C:\\msys64\usr\bin\perl %APPVEYOR_BUILD_FOLDER%/test.pl
+  - echo %var1%
+  - echo %var2%
+  
