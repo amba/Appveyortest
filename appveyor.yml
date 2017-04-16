@@ -10,7 +10,11 @@ environment:
     - strawberry_version: 5.24.1.1 --x86
       installdeps_options: -v
 
-
+install:
+  - choco install --allowemptychecksum strawberryperl --version %strawberry_version%
+  - path C:\strawberry\perl\bin;C:\strawberry\perl\site\bin;C:\strawberry\c\bin;%PATH%
+  - perl -V
+  
 build_script:
   - perl -MConfig -E "say $Config{ivsize}"
   - perl -MConfig -E "say $Config{uvsize}"
