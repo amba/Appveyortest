@@ -1,11 +1,19 @@
 environment:
   matrix:
-    - var1: x
-      var2: y
-    - var1: a
-      var2: b
+    # Run quick build without recursive testing of dependencies.
+    - strawberry_version: 5.24.1.1
+      installdeps_options: -n -v
+    - strawberry_version: 5.20.3.3 --x86
+      installdeps_options: -n -v 
+    - strawberry_version: 5.24.1.1
+      installdeps_options: -v
+    - strawberry_version: 5.24.1.1 --x86
+      installdeps_options: -v
+
 
 build_script:
-  - echo %var1%
-  - echo %var2%
+  - perl -MConfig -E 'say $Config{ivsize}'
+  - perl -MConfig -E 'say $Config{uvsize}'
+  - perl -MConfig -E 'say $Config{i32size}'
+  - perl -MConfig -E 'say $Config{i64size}'
   
