@@ -16,6 +16,4 @@ install:
   - perl -V
   
 build_script:
-  - perl -MConfig -E "say $Config{ivsize}"
-  - perl -MConfig -E "say $Config{uvsize}"
-  
+  - perl -MYAML::XS -MConfig -E 'print Dump \%Config';
