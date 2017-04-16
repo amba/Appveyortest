@@ -12,8 +12,6 @@ environment:
 
 
 build_script:
-  - perl -MConfig -E 'say $Config{ivsize}'
-  - perl -MConfig -E 'say $Config{uvsize}'
-  - perl -MConfig -E 'say $Config{i32size}'
-  - perl -MConfig -E 'say $Config{i64size}'
+  - perl -MConfig -E "say $Config{ivsize}"
+  - perl -MConfig -E "say $Config{uvsize}"
   
