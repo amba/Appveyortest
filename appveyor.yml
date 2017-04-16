@@ -16,4 +16,4 @@ install:
   - perl -V
   
 build_script:
-  - perl -MYAML::XS -MConfig -E 'print Dump \%Config';
+  - perl -MYAML::XS -MConfig -E "print Dump \%Config";
