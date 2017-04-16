@@ -16,4 +16,9 @@ install:
   - perl -V
   
 build_script:
-  - perl -MYAML::XS -MConfig -E "print Dump \%Config";
+  - perl -MConfig -E "say $Config{ivsize}"
+  - perl -MConfig -E "say $Config{uvsize}"
+  - perl -MConfig -E "say $Config{ptrsize}"
+  - perl -MConfig -E "say $Config{byteorder}"
+  - perl -MConfig -E "say $Config{archname}"
+  - perl -MConfig -E "say $Config{osname}"
