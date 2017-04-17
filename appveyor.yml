@@ -6,4 +6,5 @@ install:
   
 build_script:
   - echo abc
-  - C:/"Program Files/Zurich Instruments/LabOne/DataServer/ziDataServer.exe"
+  - ps: Start-Process "C:/Program Files/Zurich Instruments/LabOne/DataServer/ziDataServer.exe"
+  - ps: sleep 2
