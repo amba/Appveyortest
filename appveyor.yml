@@ -6,3 +6,4 @@ install:
   
 build_script:
   - echo abc
+  - "C:\Program Files\Zurich Instruments\LabOne\DataServer\ziDataServer.exe"
