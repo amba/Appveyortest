@@ -1,7 +1,8 @@
 
 install:
   - ps: Invoke-WebRequest https://www.zhinst.com/system/files/downloads/files/LabOne64-16.12.42529.msi -OutFile LabOne.msi
-  - ps: ls
+  - start /wait msiexec.exe /l* labone.log /i LabOne.msi /qn ADDLOCAL=FT_ZI_API_C
+  - ps: cat labone.log
   
 build_script:
   - echo abc
