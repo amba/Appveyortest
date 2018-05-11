@@ -1,14 +1,13 @@
-environment:
-  matrix:
-    - strawberry_version: 5.24.1.1
-    - strawberry_version: 5.22.3.1
-    - strawberry_version: 5.20.3.3
-    - strawberry_version: 5.18.4.1
+# environment:
+#   matrix:
+#     - strawberry_version: 5.24.1.1
+#     - strawberry_version: 5.22.3.1
+#     - strawberry_version: 5.20.3.3 --x86
+#     - strawberry_version: 5.18.4.1
 install:
-  - choco install --allowemptychecksum strawberryperl --version %strawberry_version%
-  - path C:\strawberry\perl\site\bin;C:\strawberry\perl\bin;C:\strawberry\c\bin;%PATH%
-  - perl -V
+  - ps: Invoke-WebRequest ftp://ftp.dante.de/pub/tex/graphics/gnuplot/5.0.5/gp505-win64-mingw.exe -OutFile gp.exe
+  - start /wait gp.exe /VERYSILENT /SUPPRESSMSGBOXES
+  - path "C:\Program Files\gnuplot\bin";%PATH%
+  - path
 build_script:
-  - cpanm --version
-  - cpanm App::cpanminus
-  - cpanm --version
+  - gnuplot --help
