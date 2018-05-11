@@ -5,7 +5,7 @@
 #     - strawberry_version: 5.20.3.3 --x86
 #     - strawberry_version: 5.18.4.1
 install:
-  - ps: Invoke-WebRequest ftp://ftp.dante.de/pub/tex/graphics/gnuplot/5.0.5/gp505-win64-mingw.exe -OutFile gp.exe
+  - ps: Invoke-WebRequest http://mirrors.ctan.org/graphics/gnuplot/5.0.5/gp505-win64-mingw.exe -OutFile gp.exe
   - start /wait gp.exe /VERYSILENT /SUPPRESSMSGBOXES
   - path "C:\Program Files\gnuplot\bin";%PATH%
   - path
