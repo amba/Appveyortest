@@ -14,4 +14,7 @@ install:
   - dir "C:\Program Files\gnuplot\bin"
 build_script:
   - gnuplot --help
+  - gnuplot --version
+  - set GNUPLOT_BINARY="C:\Program Files\gnuplot\bin\gnuplot.exe"
+  - echo %GNUPLOT_BINARY%
   - cpanm --verbose --notest PDL::Graphics::Gnuplot
