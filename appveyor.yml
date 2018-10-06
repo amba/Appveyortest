@@ -9,5 +9,6 @@ install:
   - start /wait gp.exe /VERYSILENT /SUPPRESSMSGBOXES
   - path "C:\Program Files\gnuplot\bin";%PATH% 
   - path
+  - dir "C:\Program Files\gnuplot\bin"
 build_script:
   - gnuplot --help
