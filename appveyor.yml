@@ -5,6 +5,7 @@
 #     - strawberry_version: 5.20.3.3 --x86
 #     - strawberry_version: 5.18.4.1
 install:
+  choco install --allowemptychecksum strawberryperl --version 5.20.3.3 --x86
   - ps: Invoke-WebRequest https://sourceforge.net/projects/gnuplot/files/gnuplot/5.2.0/gp520-win64-mingw.exe/download -OutFile gp.exe -UserAgent [Microsoft.PowerShell.Commands.PSUserAgent]::FireFox
   - start /wait gp.exe /VERYSILENT /SUPPRESSMSGBOXES
   - path "C:\Program Files\gnuplot\bin";%PATH% 
@@ -12,3 +13,4 @@ install:
   - dir "C:\Program Files\gnuplot\bin"
 build_script:
   - gnuplot --help
+  - cpanm --verbose --notest PDL::Graphics::Gnuplot
