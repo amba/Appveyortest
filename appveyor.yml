@@ -23,7 +23,5 @@ install:
   - gcc --version
 
 build_script:
-  - dir 'C:\strawberry\c\bin'
-  - dir 'C:\strawberry\c\lib\gcc\*\'
-  - dir 'C:\strawberry\c\lib\gcc\*\*'
+  - dir /S "C:\strawberry\c\lib"
 
