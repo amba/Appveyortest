@@ -1,20 +1,17 @@
-# environment:
-#   matrix:
-#     - strawberry_version: 5.24.1.1
-#     - strawberry_version: 5.22.3.1
-#     - strawberry_version: 5.20.3.3 --x86
-#     - strawberry_version: 5.18.4.1
+platform:
+  - x64
+  - x86
+  
+environment:
+  matrix:
+    - strawberry_version: 5.28.2.1 --x86
+    - strawberry_version: 5.20.3.3 --x86
+      
 install:
-  - choco install --allowemptychecksum strawberryperl --version 5.20.3.3 --x86
+  - choco install --allowemptychecksum strawberryperl --version %strawberry_version%
   - path C:\strawberry\perl\site\bin;C:\strawberry\perl\bin;C:\strawberry\c\bin;%PATH%
-  - ps: Invoke-WebRequest https://sourceforge.net/projects/gnuplot/files/gnuplot/5.2.0/gp520-win64-mingw.exe/download -OutFile gp.exe -UserAgent [Microsoft.PowerShell.Commands.PSUserAgent]::FireFox
-  - start /wait gp.exe /VERYSILENT /SUPPRESSMSGBOXES
-  - path "C:\Program Files\gnuplot\bin";%PATH% 
-  - path
-  - dir "C:\Program Files\gnuplot\bin"
+  - perl -V
+  - cpanm --version
 build_script:
-  - gnuplot --help
-  - gnuplot --version
-  - set GNUPLOT_BINARY="C:\Program Files\gnuplot\bin\gnuplot.exe"
-  - echo %GNUPLOT_BINARY%
-  - cpanm --verbose --notest PDL::Graphics::Gnuplot
+  - cpanm -v PDL
+
