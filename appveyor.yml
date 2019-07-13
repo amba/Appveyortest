@@ -20,6 +20,10 @@ install:
   - path C:\strawberry\perl\site\bin;C:\strawberry\perl\bin;C:\strawberry\c\bin;%PATH%
   - perl -V
   - cpanm --version
+  - gcc --version
+
 build_script:
-  - cpanm -v -n PDL
+  - dir 'C:\strawberry\c\bin'
+  - dir 'C:\strawberry\c\lib\gcc\*\'
+  - dir 'C:\strawberry\c\lib\gcc\*\*'
 
