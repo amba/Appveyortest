@@ -14,8 +14,7 @@ install:
   - perl -V
   - cpanm --version
   - gcc --version
-  - gfortran --version
-  - perl -MExtUtils::F77 -e 'print $ExtUtils::F77::VERSION, "\n";'
   
 build_script:
-  - cpanm -v ExtUtils::F77
+  - cpanm -v ExtUtils::F77@1.22
+  - cpanm -n -v PDL
