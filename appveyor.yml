@@ -16,5 +16,5 @@ install:
   - gcc --version
   
 build_script:
-  - cpanm -v ExtUtils::F77@1.22
+  - cpanm -v ExtUtils::F77
   - cpanm -n -v PDL
