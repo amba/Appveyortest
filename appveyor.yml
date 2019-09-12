@@ -13,8 +13,7 @@ install:
   - path C:\strawberry\perl\site\bin;C:\strawberry\perl\bin;C:\strawberry\c\bin;%PATH%
   - perl -V
   - cpanm --version
-  - gcc --version
   
 build_script:
-  - cpanm -v ExtUtils::F77
-  - cpanm -n -v PDL
+  - cpanm -v Module::Compile
+  - cpanm -v PDL
